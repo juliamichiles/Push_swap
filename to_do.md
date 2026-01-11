@@ -1,19 +1,21 @@
 ## To do:
 
+- [ ] Redo validation (first, parse av to tokens, then validate each token)
 - [ ] Take notes 
 - [ ] Draft project structure (in detail)
-- [ ] Create pre-gitignore
+- [X] Create pre-gitignore
 - [ ] Write main and input validation functions 
 - [ ] Write 'rules' secction
-- [ ] Find out how to include libft + on the Makefile
-- [ ] Makefile
+- [X] Find out how to include libft + on the Makefile
+- [X] Makefile
+- [ ] Include ft_printf on repo + Makefile
 - [ ] REPLACE 'write' with 'ft_printf'!!!!
-- [ ] Validation does not allow a combination of numeric strings and wtspc strings
 - [ ] Validation shouldn't allow repeated nums
 ---
 
 ## Take notes on:
 
+- [X] Each operation
 - [ ] Big O Notation
 - [ ] Algorithm types
 - [ ] More details on the chosen algorithm

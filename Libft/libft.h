@@ -25,6 +25,8 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+char    *ft_strjoin_REPLACEME(int size, char **strs, char *sep);
+
 int		ft_atoi(const char *nptr);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

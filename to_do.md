@@ -1,16 +1,20 @@
 ## To do:
 
+- [ ] Missing ft_isnum and ft_strcmp in Libft
+- [ ] Replace libft strjoin with piscine's strjoin
+- [ ] Test validation
+- [ ] Replace tokens_to_tab with tokens_to_stack (linked list)
 - [ ] Redo validation (first, parse av to tokens, then validate each token)
 - [ ] Take notes 
 - [ ] Draft project structure (in detail)
 - [X] Create pre-gitignore
-- [ ] Write main and input validation functions 
+- [X] Write main and input validation functions 
 - [ ] Write 'rules' secction
 - [X] Find out how to include libft + on the Makefile
 - [X] Makefile
 - [ ] Include ft_printf on repo + Makefile
 - [ ] REPLACE 'write' with 'ft_printf'!!!!
-- [ ] Validation shouldn't allow repeated nums
+- [X] Validation shouldn't allow repeated nums
 ---
 
 ## Take notes on:

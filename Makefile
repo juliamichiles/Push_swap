@@ -9,7 +9,7 @@ INCLUDES = -Iinclude -I$(LIBFT_DIR)
 SRCS	= srcs/main.c \
 	srcs/push_swap.c \
 	srcs/helpers.c \
-	srcs/validation.c \
+	#srcs/validation.c \
 
 OBJS	= $(SRCS:.c=.o)
 

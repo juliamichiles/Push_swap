@@ -1,9 +1,8 @@
 #include "push_swap.h"
 
-int	print_error(void)
+void	print_error(void)
 {
 	write(2, "Error\n", 6);
-	return (0);
 }
 
 void	free_tokens(char *tokens[])
@@ -29,6 +28,7 @@ int	count_tokens(char *tokens[])
 int	*tokens_to_tab(char *tokens[])//convert directly to list instead?
 {
 	int	*tab;//change to stack
+	int	value;
 	int	count;
 	int	i;
 
@@ -39,8 +39,45 @@ int	*tokens_to_tab(char *tokens[])//convert directly to list instead?
 		return (NULL);
 	while (i < count)
 	{
-		tab[i] = ft_atoi(tokens[i]);
+		if (!safe_atoi(tokens[i], &value))
+		{
+			free(tab);
+			return (NULL);
+		}
+		tab[i] = value;
 		i++;
 	}
 	return (tab);
+}
+
+int	safe_atoi(const char *str, int *out)
+{
+	long	n;
+	int	sign;
+	int	digit;
+
+	n = 0;
+	sign = 1;
+	if (*str == '+' || *str == '-')
+	{
+		if (*str == '-')
+			sign = -1;
+		str++;
+	}
+	if (!*str)
+		return (0);
+	while (*str)
+	{
+		if (!ft_isdigit(*str))
+			return (0);
+		digit = *str - '0';
+		if (sign == 1 && n > (INT_MAX - digit) / 10)
+			return (0);
+		if (sign == -1 && -n < (INT_MIN + digit) / 10)
+			return (0);
+		n = n * 10 + digit;
+		str++;
+	}
+	*out = (int)(n * sign);
+	return (1);
 }

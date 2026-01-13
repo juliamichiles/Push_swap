@@ -1,12 +1,12 @@
 ## To do:
 
-- [ ] Missing ft_isnum and ft_strcmp in Libft
-- [ ] Replace libft strjoin with piscine's strjoin
-- [ ] Test validation
 - [ ] Replace tokens_to_tab with tokens_to_stack (linked list)
-- [ ] Redo validation (first, parse av to tokens, then validate each token)
+- [ ] Add check for repeated nums in validation
+- [ ] Replace libft strjoin with piscine's strjoin + same for ft_split(??)
+- [ ] Test validation better!!!
+- [ ] Check for unused files and functions, nice repo cleanup
+- [X] Redo validation (first, parse av to tokens, then validate each token)
 - [ ] Take notes 
-- [ ] Draft project structure (in detail)
 - [X] Create pre-gitignore
 - [X] Write main and input validation functions 
 - [ ] Write 'rules' secction
@@ -14,7 +14,7 @@
 - [X] Makefile
 - [ ] Include ft_printf on repo + Makefile
 - [ ] REPLACE 'write' with 'ft_printf'!!!!
-- [X] Validation shouldn't allow repeated nums
+ 
 ---
 
 ## Take notes on:

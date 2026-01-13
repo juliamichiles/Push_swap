@@ -1,4 +1,4 @@
-#include "validation.h"
+//#include "validation.h"
 #include "helpers.h"
 #include "push_swap.h"
 
@@ -27,12 +27,13 @@ int	main(int ac, char *av[])//split this in two functions plss
 	free(joined);//ok to keep ths here?
 	if (!tokens)
 		return 1;
-	if (!validate_tokens(tokens))
-	{
-		free_tokens(tokens);
-		return 1;
-	}
 	tab = tokens_to_tab(tokens);
+	if (!tab)
+	{
+		print_error();
+		free_tokens(tokens);
+		return (1);
+	}	
 	print_tab(tab, count_tokens(tokens));
 	free_tokens(tokens);
 	free(tab);

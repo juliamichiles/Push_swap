@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int     ft_find_size(int size, char *sp, char **st);
-char	*ft_strjoin(int size, char **strs, char *sep)
+char	*ft_strjoin_REPLACEME(int size, char **strs, char *sep)
 {
 	char	*joined;
 	int	total_size;

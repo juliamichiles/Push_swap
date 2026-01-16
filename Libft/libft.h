@@ -6,7 +6,7 @@
 /*   By: juliatav <juliatav@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 14:17:21 by juliatav          #+#    #+#             */
-/*   Updated: 2025/10/24 14:49:13 by juliatav         ###   ########.fr       */
+/*   Updated: 2026/01/16 18:32:41 by juliatav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-char    *ft_strjoin_REPLACEME(int size, char **strs, char *sep);
+char    *ft_strjoin(int size, char **strs, char *sep);
 
+int		ft_isspace(char c);
 int		ft_atoi(const char *nptr);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -36,7 +37,7 @@ int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int	ft_strcmp(char *s1, char *s2);
+int		ft_strcmp(char *s1, char *s2);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
@@ -58,11 +59,10 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_itoa(int n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	**ft_split(char const *s, char c);
+char	**ft_split(char const *s);
 
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);

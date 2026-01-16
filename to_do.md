@@ -2,7 +2,7 @@
 
 - [ ] Replace tokens_to_tab with tokens_to_stack (linked list)
 - [ ] Add check for repeated nums in validation
-- [ ] Replace libft strjoin with piscine's strjoin + same for ft_split(??)
+- [X] Replace libft strjoin with piscine's strjoin + same for ft_split(??)
 - [ ] Test validation better!!!
 - [ ] Check for unused files and functions, nice repo cleanup
 - [X] Redo validation (first, parse av to tokens, then validate each token)
@@ -34,7 +34,7 @@
 ---
 
 ## Rules
-- [ ] Must have Makefile (it must not relink)
+- [X] Must have Makefile (it must not relink)
 - [ ] The first argument should be at the top of the stack
 - [ ] must display the shortest sequence of instructions needed to sort stack
       a with the smallest number at the top

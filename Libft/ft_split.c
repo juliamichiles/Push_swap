@@ -6,23 +6,23 @@
 /*   By: juliatav <juliatav@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 14:43:56 by juliatav          #+#    #+#             */
-/*   Updated: 2025/10/24 14:51:19 by juliatav         ###   ########.fr       */
+/*   Updated: 2026/01/16 18:32:24 by juliatav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	wordlen(const char *s, char c)
+static size_t	wordlen(const char *s)
 {
 	size_t	len;
 
 	len = 0;
-	while (s[len] && s[len] != c)
+	while (s[len] && !ft_isspace(s[len]))
 		len++;
 	return (len);
 }
 
-static size_t	count_words(const char *s, char c)
+static size_t	count_words(const char *s)
 {
 	size_t	count;
 	int		start;
@@ -31,24 +31,24 @@ static size_t	count_words(const char *s, char c)
 	start = 0;
 	while (*s)
 	{
-		if (!start && *s != c)
+		if (!start && !ft_isspace(*s))
 		{
 			count++;
 			start = 1;
 		}
-		if (start && *s == c)
+		if (start && ft_isspace(*s))
 			start = 0;
 		s++;
 	}
 	return (count);
 }
 
-static char	*set_words(const char *s, char c)
+static char	*set_words(const char *s)
 {
 	char	*word;
 	size_t	len;
 
-	len = wordlen(s, c) + 1;
+	len = wordlen(s) + 1;
 	word = (char *)malloc(len);
 	if (!word)
 		return (NULL);
@@ -66,28 +66,28 @@ static void	free_words(char **split, size_t current)
 	free(split);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char const *s)
 {
 	char	**split;
 	size_t	count;
 	size_t	i;
 
 	i = 0;
-	count = count_words(s, c);
+	count = count_words(s);
 	split = malloc(sizeof(char *) * (count + 1));
 	if (!split)
 		return (NULL);
 	while (i < count)
 	{
-		while (*s == c && *s)
+		while (ft_isspace(*s) && *s)
 			s++;
-		split[i] = set_words(s, c);
+		split[i] = set_words(s);
 		if (!split[i])
 		{
 			free_words(split, i);
 			return (NULL);
 		}
-		while (*s != c && *s)
+		while (!ft_isspace(*s) && *s)
 			s++;
 		i++;
 	}

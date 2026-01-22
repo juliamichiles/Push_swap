@@ -1,19 +1,25 @@
-## To do:
+## To do next:
 
-- [ ] Replace tokens_to_tab with tokens_to_stack (linked list)
-- [ ] Add check for repeated nums in validation
+- [ ] Write free_stack()
+- [ ] Test list-related + new validation functions
+- [ ] New main
+
+## To do later:
+
+- [ ] HEADERS!! Check libft functions for missing headers too!
+- [ ] Replace safe_aotoi with ft_atol + check for int limits
+- [X] Replace tokens_to_tab with tokens_to_stack (linked list)
+- [X] Add check for repeated nums in validation
 - [X] Replace libft strjoin with piscine's strjoin + same for ft_split(??)
 - [ ] Test validation better!!!
 - [ ] Check for unused files and functions, nice repo cleanup
 - [X] Redo validation (first, parse av to tokens, then validate each token)
-- [ ] Take notes 
+- [X] Take notes 
 - [X] Create pre-gitignore
 - [X] Write main and input validation functions 
 - [ ] Write 'rules' secction
 - [X] Find out how to include libft + on the Makefile
 - [X] Makefile
-- [ ] Include ft_printf on repo + Makefile
-- [ ] REPLACE 'write' with 'ft_printf'!!!!
  
 ---
 

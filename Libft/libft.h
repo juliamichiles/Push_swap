@@ -27,6 +27,7 @@ typedef struct s_list
 
 char    *ft_strjoin(int size, char **strs, char *sep);
 
+void		ft_swap(int *a, int *b);
 int		ft_isspace(char c);
 int		ft_atoi(const char *nptr);
 int		ft_isdigit(int c);

@@ -62,7 +62,7 @@ int	*tokens_to_tab(char *tokens[])//convert directly to list instead?
 	return (tab);
 }
 
-int	safe_atoi(const char *str, int *out)
+int	safe_atoi(const char *str, int *out)//too long!!
 {
 	long	n;
 	int	sign;

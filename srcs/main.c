@@ -14,40 +14,25 @@
 #include "helpers.h"
 #include "push_swap.h"
 
-#include <stdio.h> //REMOVE!!!
-void	print_tab(int *tab, int size)
+int	main(int ac, char *av[])
 {
-	int	 i = 0;
-
-	while (i < size)
-		printf("[%d]", tab[i++]);
-	printf("\n");
-}
-
-int	main(int ac, char *av[])//split this in two functions plss
-{
-	char	*joined;
-	char	**tokens;
 	int	*tab;
+	int	size;
 
+	size = 0;
 	if (ac < 2)
 		return (1);
-	joined = ft_strjoin(ac - 1, av + 1, " \t\n\r\f\v");
-	if (!joined)
-		return (1);
-	tokens = ft_split(joined);
-	free(joined);//ok to keep ths here?
-	if (!tokens)
-		return 1;
-	tab = tokens_to_tab(tokens);
+	tab = normalize_input(ac, av, &size);
 	if (!tab)
 	{
 		print_error();
-		free_tokens(tokens);
 		return (1);
-	}	
-	print_tab(tab, count_tokens(tokens));
-	free_tokens(tokens);
+		
+	}
+	if (!repeated_nums(tab))
+		print_error();
+	else 
+		//chama o push_swap ou oq quer que seja
 	free(tab);
 	return (0);
 }

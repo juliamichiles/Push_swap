@@ -1,8 +1,6 @@
 #include "push_swap.h"
 #include "helpers.h"
 
-
-//array to list
 t_stack	*new_node(int value, int index)
 {
 	t_stack	*node;
@@ -22,7 +20,7 @@ t_stack	*new_node(int value, int index)
 
 void	lst_add_back(t_stack **stack, t_stack *new)
 {
-	t_stack	*temp;
+	t_stack	*tmp;
 
 	if (!stack || !new)
 		return ;
@@ -31,7 +29,7 @@ void	lst_add_back(t_stack **stack, t_stack *new)
 		*stack = new;
 		return ;
 	}
-	temp = *stack;
+	tmp = *stack;
 	while (tmp->next)
 		tmp = tmp->next;
 	tmp->next = new;
@@ -51,14 +49,37 @@ t_stack	*tab_to_stack(int *tab, int *sorted, int size)
 		index = get_sorted_index(sorted, size, tab[i]);
 		node = new_node(tab[i], index);
 		if (!node)
+		{
+			free_stack(a);
 			return (NULL); //free previous nodes??
+		}
 		lst_add_back(&a, node);
 		i++;
 	}
 	return (a);
 }
 
-
-
 void	free_stack(t_stack *stack)
-{}
+{
+	t_stack	*tmp;
+
+	while (stack)
+	{
+		tmp = stack->next;
+		free(stack);
+		stack = tmp;
+	}
+}
+
+void	update_pos(t_stack *stack)
+{
+	int	i;
+
+	i = 0;
+	while (stack)
+	{
+		stack->pos = i;
+		stack = stack->next;
+		i++;
+	}
+}

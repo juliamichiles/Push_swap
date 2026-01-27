@@ -1,5 +1,6 @@
 ## To do next:
 
+- [ ] missing reverse rotate
 - [ ] Test list-related + new validation functions
 - [ ] New main
 

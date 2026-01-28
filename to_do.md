@@ -1,6 +1,8 @@
 ## To do next:
 
-- [ ] missing reverse rotate
+- [ ] Replace safe_aotoi (too long!) with ft_atol + check for int limit
+- [ ] The actual algorithm
+- [ ] Norminette rount
 - [ ] Test list-related + new validation functions
 - [ ] New main
 
@@ -15,6 +17,7 @@
 
 ## Done:
 
+- [X] missing reverse rotate
 - [X] Generic push and rotate functions
 - [X] list_utils + modify some libft_bonus functios
 - [X] Redo validation (first, parse av to tokens, then validate each token)

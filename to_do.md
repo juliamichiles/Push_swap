@@ -1,7 +1,6 @@
 ## To do next:
 
-- [ ] Is_sorted function??
-- [ ] Sort_4 function? (can work with lists or arrays)
+- [ ] Sort_4 function
 - [ ] Push_swap function that: calls is_sorted, sort 2, 3, 4, 5 or the actual alg.
 - [ ] Cost calculation
 - [ ] The actual algorithm
@@ -19,6 +18,7 @@
 
 ## Done:
 
+- [X] Is_sorted function
 - [X] Norminette round
 - [X] New main
 - [X] Test list-related + new validation functions

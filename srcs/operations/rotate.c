@@ -21,13 +21,13 @@ void	ra(t_stack **a)
 	write(1, "ra\n", 3);
 }
 
-void    rb(t_stack **b)
+void	rb(t_stack **b)
 {
 	rotate(b);
 	write(1, "rb\n", 3);
 }
 
-void    rr(t_stack **a, t_stack **b)
+void	rr(t_stack **a, t_stack **b)
 {
 	rotate(a);
 	rotate(b);

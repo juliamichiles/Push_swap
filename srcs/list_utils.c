@@ -11,36 +11,19 @@ t_stack	*new_node(int value, int index)
 	node->value = value;
 	node->index = index;
 	node->pos = -1;
-	node->taget = -1;
+	node->target = -1;
 	node->cost_a = 0;
 	node->cost_b = 0;
 	node->next = NULL;
 	return (node);
 }
 
-void	lst_add_back(t_stack **stack, t_stack *new)
-{
-	t_stack	*tmp;
-
-	if (!stack || !new)
-		return ;
-	if (!*stack)
-	{
-		*stack = new;
-		return ;
-	}
-	tmp = *stack;
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp->next = new;
-}
-
 t_stack	*tab_to_stack(int *tab, int *sorted, int size)
 {
 	t_stack	*node;
 	t_stack	*a;
-	int	index;
-	int	i;
+	int		index;
+	int		i;
 
 	a = NULL;
 	i = 0;
@@ -51,7 +34,7 @@ t_stack	*tab_to_stack(int *tab, int *sorted, int size)
 		if (!node)
 		{
 			free_stack(a);
-			return (NULL); //free previous nodes??
+			return (NULL);
 		}
 		lst_add_back(&a, node);
 		i++;
@@ -82,4 +65,19 @@ void	update_pos(t_stack *stack)
 		stack = stack->next;
 		i++;
 	}
+}
+
+t_stack	*get_stack_a(int *tab, int size)
+{
+	t_stack	*stack_a;
+	int		*sorted;
+
+	sorted = tabdup(tab, size);
+	if (!sorted)
+		return (NULL);
+	sort_tab(sorted, size);
+	stack_a = tab_to_stack(tab, sorted, size);
+	if (!stack_a)
+		return (NULL);
+	return (stack_a);
 }

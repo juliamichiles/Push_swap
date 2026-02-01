@@ -1,15 +1,17 @@
 ## To do next:
 
-- [ ] Replace safe_aotoi (too long!) with ft_atol + check for int limit
+- [ ] Is_sorted function??
+- [ ] Sort_4 function? (can work with lists or arrays)
+- [ ] Push_swap function that: calls is_sorted, sort 2, 3, 4, 5 or the actual alg.
+- [ ] Cost calculation
 - [ ] The actual algorithm
-- [ ] Norminette rount
-- [ ] Test list-related + new validation functions
-- [ ] New main
+- [ ] Remove 'pos' from structure??
+- [ ] Test sorting functions so far
 
 ## To do later:
 
-- [ ] HEADERS!! Check libft functions for missing headers too! Or pther issues
-- [ ] Replace safe_aotoi (too long!) with ft_atol + check for int limits
+- [ ] Merge helpers.h and push_swap.h in a single header file
+- [ ] 42 HEADERS!! Check libft functions for missing headers too! Or pther issues
 - [ ] Test validation better!!!
 - [ ] Check for unused files and functions, nice repo cleanup
 
@@ -17,6 +19,11 @@
 
 ## Done:
 
+- [X] Norminette round
+- [X] New main
+- [X] Test list-related + new validation functions
+- [X] Implement sort 2, 3 and 5 functions
+- [X] Replace safe_aotoi (too long!) with ft_atol + check for int limits
 - [X] missing reverse rotate
 - [X] Generic push and rotate functions
 - [X] list_utils + modify some libft_bonus functios
@@ -63,5 +70,6 @@
 
 ## Questions:
 
+- Should it really do nothing if the stack is sorted? I think so
 - Can I really have my subdirectories?
 - How do I include libft and ft_printf?

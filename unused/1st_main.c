@@ -10,69 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include "validation.h"
 #include "helpers.h"
 #include "push_swap.h"
 
-#include <stdio.h>//REMOVE!!!
-void	print_stack(t_stack *stack)//REMOVE ME!!!!
-{
-	int	i = 0;
-	while (stack)
-	{
-		printf("----- NODE %d -----\n", i);
-		printf("value: %d\n", stack->value);
-		printf("index: %d\n", stack->index);
-		printf("pos: %d\n", stack->pos);
-		printf("target: %d\n", stack->target);
-		printf("cost_a: %d\n", stack->cost_a);
-		printf("cost_b: %d\n", stack->cost_b);
-		stack = stack->next;
-		i++;
-	}
-	printf("-------------------\n");
-}
-
-
 int	main(int ac, char *av[])
 {
-	t_stack	*stack_a;
-	//t_stack	*stack_b;
 	int	*tab;
 	int	size;
 
 	size = 0;
-	//stack_b = NULL;
 	if (ac < 2)
 		return (1);
-	tab = normalize_input(ac, av, &size);//also sets a value to tab
+	tab = normalize_input(ac, av, &size);
 	if (!tab)
 	{
 		print_error();
 		return (1);
 		
 	}
-	if (!repeated_nums(tab, size))//move it to validation function
-	{
-		free(tab);
+	if (!repeated_nums(tab))
 		print_error();
-		return (1);
-	}
-	if (is_sorted(tab))//move it to validation function
-	{
-		free(tab);
-		return (1);
-	}
-	stack_a = get_stack_a(tab, size);
-	if (!stack_a)
-	{
-		free(tab);
-		return (1);
-	}
-	printf("### BEFORE ###\n");//REMOVE!!
-	print_stack(stack_a);
-	printf("### AFTER ###\n");//REMOVE!!
-	//calls sorting functions
-	free_stack(stack_a);
+	else 
+		//chama o push_swap ou oq quer que seja
 	free(tab);
 	return (0);
 }

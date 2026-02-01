@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+long long	ft_atol(const char *nptr)
 {
-	int	sign;
-	int	n;
+	long long	sign;
+	long long	n;
 
 	n = 0;
 	sign = 1;

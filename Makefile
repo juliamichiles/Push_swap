@@ -18,10 +18,17 @@ LIBFT_DIR	= Libft
 LIBFT		= $(LIBFT_DIR)/libft.a
 
 INCLUDES = -Iinclude -I$(LIBFT_DIR)
-SRCS	= srcs/main.c \
-	srcs/push_swap.c \
+SRCS =  srcs/main.c \
+	srcs/cost.c \
 	srcs/helpers.c \
-	#srcs/validation.c \
+	srcs/list_utils.c \
+	srcs/list_utils_2.c \
+	srcs/small_stacks.c \
+	srcs/validate.c \
+	srcs/operations/push.c \
+	srcs/operations/rev_rotate.c \
+	srcs/operations/rotate.c \
+	srcs/operations/swap.c
 
 OBJS	= $(SRCS:.c=.o)
 

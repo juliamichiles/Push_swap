@@ -3,8 +3,8 @@
 
 int	repeated_nums(int *tab, int size)//should size be a size_t?
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i < size - 1)
@@ -21,17 +21,17 @@ int	repeated_nums(int *tab, int size)//should size be a size_t?
 	return (1);
 }
 
-int	*normalize_input(int ac, char *av[], int *size)//split this in two functions plss
+int	*normalize_input(int ac, char *av[], int *size)
 {
 	char	*joined;
 	char	**tokens;
-	int	*tab;
+	int		*tab;
 
-	joined = ft_strjoin(ac - 1, av + 1, " \t\n\r\f\v");//change to take &ft_isspc?
+	joined = ft_strjoin(ac - 1, av + 1, " \t\n\r\f\v");
 	if (!joined)
 		return (NULL);
 	tokens = ft_split(joined);
-	free(joined);//ok to keep ths here?
+	free(joined);
 	if (!tokens)
 		return (NULL);
 	*size = count_tokens(tokens);
@@ -42,7 +42,6 @@ int	*normalize_input(int ac, char *av[], int *size)//split this in two functions
 		free_tokens(tokens);
 		return (NULL);
 	}
-	print_tab(tab, *size);//REMOVE!!
 	free_tokens(tokens);
 	return (tab);
 }
@@ -74,7 +73,6 @@ void	sort_tab(int *tab, int size)
 	i = 0;
 	while (i < size - 1)
 	{
-
 		j = i + 1;
 		while (j < size)
 		{

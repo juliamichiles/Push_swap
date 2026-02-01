@@ -37,9 +37,9 @@ int	count_tokens(char *tokens[])
 	return (count);
 }
 
-int	*tokens_to_tab(char *tokens[])//convert directly to list instead?
+int	*tokens_to_tab(char *tokens[])
 {
-	int	*tab;//change to stack
+	int	*tab;
 	int	value;
 	int	count;
 	int	i;
@@ -51,7 +51,8 @@ int	*tokens_to_tab(char *tokens[])//convert directly to list instead?
 		return (NULL);
 	while (i < count)
 	{
-		if (!safe_atoi(tokens[i], &value))
+		value = ft_atol(tokens[i]);
+		if (value > INT_MAX || value < INT_MIN)
 		{
 			free(tab);
 			return (NULL);
@@ -62,7 +63,23 @@ int	*tokens_to_tab(char *tokens[])//convert directly to list instead?
 	return (tab);
 }
 
-int	safe_atoi(const char *str, int *out)//too long!!
+int	is_sorted(int *tab, int size)
+{
+	int	i;
+
+	i =	0;
+	if (size < 2)
+		return (1);
+	while (i < size - 1)
+	{
+		if (tab[i + 1] <= tab[i])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+/*
+int	safe_atoi(const char *str, int *out)
 {
 	long	n;
 	int	sign;
@@ -92,4 +109,4 @@ int	safe_atoi(const char *str, int *out)//too long!!
 	}
 	*out = (int)(n * sign);
 	return (1);
-}
+}*/

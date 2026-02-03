@@ -1,11 +1,8 @@
 ## To do next:
 
-- [ ] Sort_4 function
-- [ ] Push_swap function that: calls is_sorted, sort 2, 3, 4, 5 or the actual alg.
-- [ ] Cost calculation
+- [ ] Cost calculation + find_target
 - [ ] The actual algorithm
 - [ ] Remove 'pos' from structure??
-- [ ] Test sorting functions so far
 
 ## To do later:
 
@@ -18,6 +15,9 @@
 
 ## Done:
 
+- [X] Sort_4 function
+- [X] Push_swap function that: calls is_sorted, sort 2, 3, 4, 5 or the actual alg.
+- [X] Test sorting functions so far
 - [X] Is_sorted function
 - [X] Norminette round
 - [X] New main

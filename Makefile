@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME	= push_swap
-CC	= cc
+CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 
 LIBFT_DIR	= Libft
@@ -28,7 +28,9 @@ SRCS =  srcs/main.c \
 	srcs/operations/push.c \
 	srcs/operations/rev_rotate.c \
 	srcs/operations/rotate.c \
-	srcs/operations/swap.c
+	srcs/operations/swap.c \
+	srcs/sorting_helpers.c \
+	srcs/push_swap.c
 
 OBJS	= $(SRCS:.c=.o)
 

@@ -20,9 +20,26 @@ void	sort_2(t_stack **stack)
 		sa(stack);
 }
 
-void	sort_4(t_stack **stack)
+void	sort_4(t_stack **a, t_stack **b)
 {
-    
+    int min_pos;
+	int	size;
+
+	size = 4;
+	min_pos = get_min_pos(*a);
+	if (min_pos <= size / 2)
+	{
+		while (min_pos-- > 0)
+			ra(a);
+	}
+	else
+	{
+		while (min_pos++ < size)
+			rra(a);
+	}
+	pb(a, b);
+	sort_3(a);
+	pa(b, a);
 }
 
 void	sort_5(t_stack **a, t_stack **b)

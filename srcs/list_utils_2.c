@@ -17,7 +17,7 @@ void	lst_add_back(t_stack **stack, t_stack *new)
 	tmp->next = new;
 }
 
-void	ft_lstadd_front(t_stack **lst, t_stack *new)
+void	ft_lstadd_front(t_stack **lst, t_stack *new)//no NULL check?
 {
 	if (new && lst)
 	{

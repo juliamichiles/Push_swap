@@ -19,6 +19,8 @@ typedef struct s_stack
 	struct s_stack		*next;
 }						t_stack;
 
+void	push_swap(t_stack **a, t_stack **b, int size);
+
 //validation:
 int		is_sorted(int *tab, int size);
 int		get_sorted_index(int *sorted, int size, int current);
@@ -53,4 +55,10 @@ int		ft_lstsize(t_stack *lst);
 //sorting helpers:
 int		get_max_pos(t_stack *stack);
 int		get_min_pos(t_stack *stack);
+
+//small stacks:
+void	sort_2(t_stack **stack);
+void	sort_3(t_stack **stack);
+void	sort_4(t_stack **a, t_stack **b);
+void	sort_5(t_stack **a, t_stack **b);
 #endif

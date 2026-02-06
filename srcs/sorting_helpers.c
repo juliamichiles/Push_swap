@@ -1,4 +1,3 @@
-#include "helpers.h"
 #include "push_swap.h"
 
 int	get_max_pos(t_stack *stack)
@@ -43,4 +42,21 @@ int	get_min_pos(t_stack *stack)
 		i++;
 	}
 	return (pos);
-}	
+}
+
+t_stack	*find_min(t_stack *stack)
+{
+	t_stack	*min;
+
+	min = stack;
+	while (stack)
+	{
+		if (stack->index < min->index)
+			min = stack;
+		stack = stack->next;
+	}
+	return (min);
+}
+
+//add int is_sorted(t_stack *stack)
+//add int is_rev_sorted(t_stack *stack)

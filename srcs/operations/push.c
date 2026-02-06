@@ -1,7 +1,6 @@
 #include "push_swap.h"
-#include "helpers.h"
 
-void	push(t_stack **src, t_stack **dest)
+static void	push(t_stack **src, t_stack **dest)
 {
 	t_stack	*tmp;
 

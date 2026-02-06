@@ -1,4 +1,3 @@
-#include "helpers.h"
 #include "push_swap.h"
 
 void	sort_3(t_stack **stack)
@@ -22,7 +21,7 @@ void	sort_2(t_stack **stack)
 
 void	sort_4(t_stack **a, t_stack **b)
 {
-    int min_pos;
+	int	min_pos;
 	int	size;
 
 	size = 4;

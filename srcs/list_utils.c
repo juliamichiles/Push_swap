@@ -1,5 +1,4 @@
 #include "push_swap.h"
-#include "helpers.h"
 
 t_stack	*new_node(int value, int index)
 {
@@ -11,9 +10,9 @@ t_stack	*new_node(int value, int index)
 	node->value = value;
 	node->index = index;
 	node->pos = -1;
-	node->target = -1;
 	node->cost_a = 0;
 	node->cost_b = 0;
+	node->target = NULL;
 	node->next = NULL;
 	return (node);
 }
@@ -77,6 +76,7 @@ t_stack	*get_stack_a(int *tab, int size)
 		return (NULL);
 	sort_tab(sorted, size);
 	stack_a = tab_to_stack(tab, sorted, size);
+	free(sorted);
 	if (!stack_a)
 		return (NULL);
 	return (stack_a);

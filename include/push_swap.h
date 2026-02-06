@@ -6,28 +6,34 @@
 # include <stddef.h>
 # include <limits.h>
 # include "../Libft/libft.h"
-# include "helpers.h"
 
 typedef struct s_stack
 {
 	int					value;
 	int					index;
 	int					pos;
-	int					target;
 	int					cost_a;
 	int					cost_b;
+	struct s_stack		*target;
 	struct s_stack		*next;
 }						t_stack;
 
-void	push_swap(t_stack **a, t_stack **b, int size);
+void	push_swap(int *tab, int size);
+
+//helpers:
+void	print_error(void);
+int		count_tokens(char *tokens[]);
+int		*tokens_to_tab(char *tokens[]);
+void	free_tokens(char *tokens[]);
 
 //validation:
 int		is_sorted(int *tab, int size);
 int		get_sorted_index(int *sorted, int size, int current);
-int		repeated_nums(int *tab, int size);
 int		*normalize_input(int ac, char *av[], int *size);
 int		*tabdup(int *tab, int size);
 void	sort_tab(int *tab, int size);
+int		*validate(int ac, char *av[], int *size);
+int		check_tokens(char **tokens);
 
 //operations:
 void	pa(t_stack **b, t_stack **a);
@@ -55,10 +61,25 @@ int		ft_lstsize(t_stack *lst);
 //sorting helpers:
 int		get_max_pos(t_stack *stack);
 int		get_min_pos(t_stack *stack);
+t_stack	*find_min(t_stack *stack);
+//add int is_sorted(t_stack *stack);
+//add int is_rev_sorted(t_stack *stack);
 
 //small stacks:
 void	sort_2(t_stack **stack);
 void	sort_3(t_stack **stack);
 void	sort_4(t_stack **a, t_stack **b);
 void	sort_5(t_stack **a, t_stack **b);
+
+//costs and targets:
+t_stack *find_cheapest(t_stack *b);
+int		ft_abs(int n);
+void	set_costs(t_stack *a, t_stack *b);
+int		get_cost(int pos, int size);
+void	set_target(t_stack *a, t_stack *b);
+
+void	exec_move(t_stack **a, t_stack **b, t_stack *cheapest);
+void	rotate_stack(t_stack **a);
+void	turk_sort(t_stack **a, t_stack **b);
+
 #endif

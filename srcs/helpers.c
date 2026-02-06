@@ -9,7 +9,6 @@
 /*   Updated: 2026/01/16 18:35:11 by juliatav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "push_swap.h"
 
 void	print_error(void)
@@ -67,7 +66,7 @@ int	is_sorted(int *tab, int size)
 {
 	int	i;
 
-	i =	0;
+	i = 0;
 	if (size < 2)
 		return (1);
 	while (i < size - 1)

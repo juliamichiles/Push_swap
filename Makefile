@@ -19,20 +19,20 @@ LIBFT		= $(LIBFT_DIR)/libft.a
 
 INCLUDES = -Iinclude -I$(LIBFT_DIR)
 SRCS =  srcs/main.c \
-	srcs/helpers.c \
-	srcs/list_utils.c \
-	srcs/list_utils_2.c \
-	srcs/small_stacks.c \
-	srcs/validate.c \
+	srcs/validation/helpers.c \
+	srcs/sorting/list_utils.c \
+	srcs/sorting/list_utils_2.c \
+	srcs/sorting/small_stacks.c \
+	srcs/validation/validate.c \
 	srcs/operations/push.c \
 	srcs/operations/rev_rotate.c \
 	srcs/operations/rotate.c \
 	srcs/operations/swap.c \
-	srcs/sorting_helpers.c \
-	srcs/push_swap.c \
-	srcs/exec_moves.c \
-	srcs/target_and_cost.c \
-	srcs/parse.c
+	srcs/sorting/sorting_helpers.c \
+	srcs/sorting/push_swap.c \
+	srcs/sorting/exec_moves.c \
+	srcs/sorting/target_and_cost.c \
+	srcs/validation/parse.c
 
 OBJS	= $(SRCS:.c=.o)
 

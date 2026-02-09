@@ -38,8 +38,8 @@ int	count_tokens(char *tokens[])
 
 int	*tokens_to_tab(char *tokens[])
 {
+	ssize_t	value;
 	int	*tab;
-	int	value;
 	int	count;
 	int	i;
 
@@ -56,7 +56,7 @@ int	*tokens_to_tab(char *tokens[])
 			free(tab);
 			return (NULL);
 		}
-		tab[i] = value;
+		tab[i] = (int)value;
 		i++;
 	}
 	return (tab);

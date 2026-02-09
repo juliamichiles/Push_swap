@@ -1,13 +1,10 @@
 ## To do next:
 
 - [ ] Remove comments + norm check
-- [ ] Split normalize input in split_input e join_input
-- [ ] Must reject empty string in the middle of valid ones?
-- [ ] Not printing error for int over/underflow
+- [ ] Add function that seatches for empty strings/wtspc strings
 - [ ] Fix validation errors (use validation_tester.sh)
-- [ ] Organize 'srcs' in subdirs + update Makefile accordingly
 - [ ] Handle edge case of rev_sorted (call is_revsorted + rotate_stack)
-- [ ] README.md
+- [ ] Finish README.md
 
 ## To do later:
 
@@ -21,6 +18,8 @@
 
 ## Done:
 
+- [X] Print error for int over/underflow
+- [X] Organize 'srcs' in subdirs + update Makefile accordingly
 - [X] Merge helpers.h and push_swap.h in a single header file
 - [X] Implement rotate_stack + is_revsorted
 - [X] finish push_swap() function

@@ -4,7 +4,6 @@
 - [ ] Finish README.md
 - [ ] Check for unused files and functions, nice repo cleanup
 - [ ] Norm check inside libft
-- [ ] 42 HEADERS!! Check libft functions for missing headers too! Or Other issues
 - [ ] Search unwanted files
 - [ ] Run 'grep -n "printf" \*'
 
@@ -18,6 +17,7 @@
 
 ## Done:
 
+- [X] 42 HEADERS!! Check libft functions for missing headers too! Or Other issues
 - [X] Test validation better!!!
 - [X] A LOT of tests (print intermediate sorting states)
 - [X] Add function that searches for empty strings/wtspc strings

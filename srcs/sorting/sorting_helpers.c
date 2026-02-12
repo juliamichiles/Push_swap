@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sorting_helpers.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juliatav <juliatav@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/12 15:53:20 by juliatav          #+#    #+#             */
+/*   Updated: 2026/02/12 15:58:21 by juliatav         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	get_max_pos(t_stack *stack)
@@ -61,7 +73,7 @@ t_stack	*find_min(t_stack *stack)
 int	is_rotate_sorted(t_stack *stack)
 {
 	t_stack	*current;
-	t_stack *min;
+	t_stack	*min;
 	int		drops;
 
 	drops = 0;
@@ -69,13 +81,13 @@ int	is_rotate_sorted(t_stack *stack)
 	min = find_min(stack);
 	while (current->next)
 	{
-		 if (current->index > current->next->index)
-		 {
+		if (current->index > current->next->index)
+		{
 			if (current->next != min)
 				return (0);
 			drops++;
-		 }
-		 current = current->next;
+		}
+		current = current->next;
 	}
 	return (drops <= 1);
 }

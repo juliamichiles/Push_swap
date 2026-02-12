@@ -6,7 +6,7 @@
 /*   By: juliatav <juliatav@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 18:35:06 by juliatav          #+#    #+#             */
-/*   Updated: 2026/01/16 18:35:11 by juliatav         ###   ########.fr       */
+/*   Updated: 2026/02/12 15:59:31 by juliatav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -39,9 +39,9 @@ int	count_tokens(char *tokens[])
 int	*tokens_to_tab(char *tokens[])
 {
 	ssize_t	value;
-	int	*tab;
-	int	count;
-	int	i;
+	int		*tab;
+	int		count;
+	int		i;
 
 	i = 0;
 	count = count_tokens(tokens);

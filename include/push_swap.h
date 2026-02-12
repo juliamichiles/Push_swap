@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juliatav <juliatav@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/12 16:01:48 by juliatav          #+#    #+#             */
+/*   Updated: 2026/02/12 17:13:44 by juliatav         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -73,7 +85,7 @@ void	sort_4(t_stack **a, t_stack **b);
 void	sort_5(t_stack **a, t_stack **b);
 
 //costs and targets:
-t_stack *find_cheapest(t_stack *b);
+t_stack	*find_cheapest(t_stack *b);
 int		ft_abs(int n);
 void	set_costs(t_stack *a, t_stack *b);
 int		get_cost(int pos, int size);

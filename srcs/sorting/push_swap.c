@@ -44,6 +44,11 @@ void	rotate_stack(t_stack **a)
 
 void	turk_sort(t_stack **a, t_stack **b)
 {
+	if (is_rotate_sorted(*a))
+	{
+		rotate_stack(a);
+		return ;
+	}
 	pb_until_3(a, b);
 	sort_3(a);
 	return_to_a(a, b);

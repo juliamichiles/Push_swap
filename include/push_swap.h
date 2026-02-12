@@ -31,9 +31,11 @@ int		is_sorted(int *tab, int size);
 int		get_sorted_index(int *sorted, int size, int current);
 int		*normalize_input(int ac, char *av[], int *size);
 int		*tabdup(int *tab, int size);
-void	sort_tab(int *tab, int size);
 int		*validate(int ac, char *av[], int *size);
 int		check_tokens(char **tokens);
+int		str_is_empty(char *str);
+int		empty_strs(char *av[]);
+void	sort_tab(int *tab, int size);
 
 //operations:
 void	pa(t_stack **b, t_stack **a);
@@ -62,8 +64,7 @@ int		ft_lstsize(t_stack *lst);
 int		get_max_pos(t_stack *stack);
 int		get_min_pos(t_stack *stack);
 t_stack	*find_min(t_stack *stack);
-//add int is_sorted(t_stack *stack);
-//add int is_rev_sorted(t_stack *stack);
+int		is_rotate_sorted(t_stack *stack);
 
 //small stacks:
 void	sort_2(t_stack **stack);

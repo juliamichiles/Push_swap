@@ -80,3 +80,16 @@ int	get_sorted_index(int *sorted, int size, int current)
 	}
 	return (-1);
 }
+
+int	str_is_empty(char *str)
+{
+	if (!str)
+		return (1);
+	while (*str)
+	{
+		if (!ft_isspace(*str))
+			return (0);
+		str++;
+	}
+	return (1);
+}

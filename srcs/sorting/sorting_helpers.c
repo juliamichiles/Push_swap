@@ -58,5 +58,24 @@ t_stack	*find_min(t_stack *stack)
 	return (min);
 }
 
-//add int is_sorted(t_stack *stack)
-//add int is_rev_sorted(t_stack *stack)
+int	is_rotate_sorted(t_stack *stack)
+{
+	t_stack	*current;
+	t_stack *min;
+	int		drops;
+
+	drops = 0;
+	current = stack;
+	min = find_min(stack);
+	while (current->next)
+	{
+		 if (current->index > current->next->index)
+		 {
+			if (current->next != min)
+				return (0);
+			drops++;
+		 }
+		 current = current->next;
+	}
+	return (drops <= 1);
+}

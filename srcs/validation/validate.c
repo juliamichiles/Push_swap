@@ -52,6 +52,8 @@ int	*validate(int ac, char *av[], int *size)
 {
 	int	*tab;
 
+	if (empty_strs(av))
+		return (NULL);
 	tab = normalize_input(ac, av, size);
 	if (!tab)
 		return (NULL);
@@ -61,4 +63,18 @@ int	*validate(int ac, char *av[], int *size)
 		return (NULL);
 	}
 	return (tab);
+}
+
+int	empty_strs(char *av[])
+{
+	int	i;
+
+	i = 1;
+	while (av[i])
+	{
+		if (str_is_empty(av[i]))
+			return (1);
+		i++;
+	}
+	return (0);
 }

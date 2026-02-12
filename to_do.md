@@ -1,23 +1,28 @@
 ## To do next:
 
 - [ ] Remove comments + norm check
-- [ ] Add function that seatches for empty strings/wtspc strings
-- [ ] Fix validation errors (use validation_tester.sh)
-- [ ] Handle edge case of rev_sorted (call is_revsorted + rotate_stack)
 - [ ] Finish README.md
+- [ ] Check for unused files and functions, nice repo cleanup
+- [ ] Norm check inside libft
+- [ ] 42 HEADERS!! Check libft functions for missing headers too! Or Other issues
+- [ ] Search unwanted files
+- [ ] Run 'grep -n "printf" \*'
+
+---
 
 ## To do later:
 
-- [ ] A LOT of tests (print intermediate sorting states)
 - [ ] Replace int for size_t/ssize_t for counters, indexes, sizes, etc.
-- [ ] 42 HEADERS!! Check libft functions for missing headers too! Or pther issues
-- [ ] Test validation better!!!
-- [ ] Check for unused files and functions, nice repo cleanup
 
 ---
 
 ## Done:
 
+- [X] Test validation better!!!
+- [X] A LOT of tests (print intermediate sorting states)
+- [X] Add function that searches for empty strings/wtspc strings
+- [X] Fix validation errors (use validation_tester.sh)
+- [X] Handle edge case of rev_sorted (call is_revsorted + rotate_stack
 - [X] Print error for int over/underflow
 - [X] Organize 'srcs' in subdirs + update Makefile accordingly
 - [X] Merge helpers.h and push_swap.h in a single header file

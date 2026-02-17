@@ -1,22 +1,16 @@
 ## To do next:
 
 - [ ] Remove comments + norm check
-- [ ] Finish README.md
 - [ ] Check for unused files and functions, nice repo cleanup
 - [ ] Norm check inside libft
 - [ ] Search unwanted files
-- [ ] Run 'grep -n "printf" \*'
-
----
-
-## To do later:
-
-- [ ] Replace int for size_t/ssize_t for counters, indexes, sizes, etc.
 
 ---
 
 ## Done:
 
+- [X] Finish README.md
+- [X]  Run 'grep -n "printf" \*'
 - [X] 42 HEADERS!! Check libft functions for missing headers too! Or Other issues
 - [X] Test validation better!!!
 - [X] A LOT of tests (print intermediate sorting states)
@@ -91,4 +85,3 @@
 - Does ir really makes sense to keep sort_4 and 5 functions?
 - Should it really do nothing if the stack is sorted? I think so
 - Can I really have my subdirectories?
-- How do I include libft and ft_printf?

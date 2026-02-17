@@ -16,16 +16,16 @@ The goal of this project is to sort a stack of integers using two stacks (a and 
 	- rrb (reverse rotate b): Shift down all elements of stack b by 1.
 	- rrr : rra and rrb at the same time
 
-This implementation uses a cost-based sorting strategy inspired by the Turk Algorithm. It works by pushing elements from 'stack a' to 'stack b' until only three elements remain in 'stack a'. Those three elements will be sorted in a few operations. After that, each element in 'stack b' will be reinserted in 'stack a' in its correct position by choosing the option with the lowest calculated cost.
+This implementation uses a cost-based sorting strategy inspired by the Turk Algorithm. It works by pushing elements from `stack a` to `stack b` until only three elements remain in `stack a`. Those three elements will be sorted in a few operations. After that, each element in `stack b` will be reinserted in `stack a` in its correct position by choosing the option with the lowest calculated cost.
 						
 ---
 ## Instructions
 
-- To compile the program, use:
+- To compile the program:
 ```
 make
 ```
-- To run the program with a list of integers, use:
+- To run the program with a list of integers:
 ```
 ./push_swap -2 100 42 10 8
 ```
@@ -35,10 +35,6 @@ make
 
 This project was done using the following references:
 
-#### Official / 42 Resources
-- 42 Gitbook — Push_swap Guide  
-  https://42-cursus.gitbook.io/guide/2-rank-02/push_swap
-
 #### Big-O & Complexity Analysis
 - Analysis of Algorithms (Big-O) — GeeksforGeeks  
   https://www.geeksforgeeks.org/dsa/analysis-algorithms-big-o-analysis/
@@ -47,6 +43,8 @@ This project was done using the following references:
   https://www.geeksforgeeks.org/dsa/time-complexities-of-all-sorting-algorithms/
 
 #### Turk Algorithm & Push_swap Strategy
+
+
 - Push_swap Turk Algorithm Explained in 6 Steps  
   https://pure-forest.medium.com/push-swap-turk-algorithm-explained-in-6-steps-4c6650a458c0
 
@@ -59,4 +57,5 @@ This project was done using the following references:
 #### Video Resource
 - Push_swap Explanation (YouTube)  
   https://www.youtube.com/watch?v=wRvipSG4Mmk
+
 **AI usage:** AI was used to clarify algorithmic concepts, review edge cases, assist in writing testing scripts, and help refine explanations in the README. All algorithm implementation, logic design, debugging, and optimization were done manually.
